@@ -1,0 +1,3 @@
+[submodule "my-bootswatch"]
+	path = my-bootswatch
+	url = https://github.com/ozmoroz/my-bootswatch
