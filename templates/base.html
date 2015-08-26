@@ -202,5 +202,17 @@
 {% include 'includes/piwik.html' %}
 
 {% block scripts %}{% endblock %}
+
+<!-- Track named audio plays via Google Analytics -->
+
+<script type="text/javascript">
+    $("audio").bind("play ended", function(e){
+        var name = $(this).attr('name');
+        if(name) {
+            ga('send', 'event', 'Audio', e.type, name);
+        }
+    });
+</script>
+
 </body>
 </html>
